@@ -1,14 +1,14 @@
 [
   {
-    "name": "",
-    "description": "Great italian leather shoes",
+    "name": "Italian Shoes",
+    "description": "Italian leather shoes",
     "price": 100,
     "category": "work",
     "image": "http://i.luxury-insider.com/uploads/features/2012/04/guide-how-to-care-for-leather-shoes_2.jpg"
   },
   {
     "name": "Macbook Pro 13 inch",
-    "description": "State of the art technology",
+    "description": "Apple product",
     "price": 1000,
     "category": "work",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/MacBook_white.png/450px-MacBook_white.png"
@@ -36,7 +36,7 @@
   },
   {
     "name": "IKEA Dekstop",
-    "description":"Great White IKEA Desktop. Swedish expertise at your own house.",
+    "description":"White IKEA Desktop",
     "price": 400,
     "category": "home",
     "image": "http://prettyprovidence.com/wp-content/uploads/2014/01/ikea-hack-desk-1.jpg"
