@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Chaussure</title>
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.7.1/angular-material.min.css">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body data-ng-app="App">
+<div class="container">
+
+
+<!--HEADER SECTION -->
+<header class="header" ng-controller="HeaderController">
+  <div class="header-title">
+    <div><p>CHAUSSURE</p></div>
+  </div>
+  <div class="header-content">
+
+    <div class="header-links">
+      <p><a href="/#/">Wish list (0)</a></p>
+      <p><a href="/#/checkout">My Account</a></p>
+      <p><a href="/#/checkout">Checkout</a></p>
+      <p><a href="/#/">Select a language <i class="icon ion-chevron-down"></i></a></p>
+    </div>
+
+    <div class="header-user-container">
+      <div class="header-support">
+        <img src="public/img/phone.png" alt="phone">
+        <div class="header-box-content">
+          <p class="header-box-title">(08)4123541214</p>
+          <span class="header-box-text"><a href="/#/">Support online</a></span>
+        </div>
+      </div>
+
+      <div class="header-account">
+        <img src="public/img/account.png" alt="account">
+        <div class="header-box-content">
+          <p class="header-box-title">MY ACCOUNT</p>
+          <span class="header-box-text">Welcome customer (<a href="/#/">log in</a>)</span>
+        </div>
+      </div>
+
+      <div class="header-panier">
+        <img src="public/img/shop.png" alt="shop">
+        <div class="header-panier-content">
+          <span class="panier-number"><a href="/#/panier">{{panierCount}}</a></span> <span class="panier-text">item(s)</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+<!--END OF HEADER SECTION  -->
+
+<!-- TOOLBAR SEARCH SECTION -->
+  <div class="toolbar">
+    <ul>
+      <li><a href="/#/">Hers</a></li>
+      <li><a href="/#/">His</a></li>
+      <li><a href="/#/">Kids</a></li>
+      <li><a href="/#/">Trainers</a></li>
+      <li><a href="/#/">Accessories</a></li>
+      <li><a href="/#/">Brands</a></li>
+      <li><a href="/#/">Sales</a></li>
+      <li><a href="/#/">Dealers</a></li>
+    </ul>
+
+    <div class="search" ng-controller="SearchController">
+      <input id="search-input" ng-model="search" type="text" placeholder="Search entire store here">
+      <md-button ng-click="setSearch(search)" class="md-raised md-warn" id="search-btn">Search</md-button>
+    </div>
+  </div>
+<!-- END OF TOOLBAR SECTION  -->
+
+<!-- ADS SECTION -->
+  <div class="ads">
+    <p><img src="public/img/sale.png" alt="sale">10% for all students</p>
+    <p><img src="public/img/delivery.png" alt="delivery">International delivery <span>from $5</span></p>
+    <p><img src="public/img/return.png" alt="return">Free returns <span>with collect +</span></p>
+  </div>
+<!-- END OF ADS SECTION  -->
+
+<!-- BODY SECTION -->
+  <div class="body">
+    <div ui-view></div>
+  </div>
+<!-- END OF BODY SECTION -->
+
+<!-- FOOTER SECTION -->
+<footer>
+  <div class="footer-section">
+    <p class="footer-title">About us</p>
+    <div class="footer-section-content">
+      <p class="footer-section-text-title">Lorem ipsum do amet</p>
+      <p class="footer-section-text">
+        Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.
+
+      </p>
+    </div>
+  </div>
+  <div class="footer-section">
+    <p class="footer-title">Guarantee</p>
+    <div class="footer-section-content">
+      <a href="/">Security</a>
+      <a href="/">Quality</a>
+      <a href="/">Support</a>
+      <a href="/">Value for money</a>
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <p class="footer-title">Our support</p>
+    <div class="footer-section-content">
+      <a href="/">Need help</a>
+      <a href="/">FAQ</a>
+      <a href="/">SMS Unsubscription</a>
+      <a href="/">How to use Promo code?</a>
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <p class="footer-title">Our support</p>
+    <div class="footer-section-content">
+      <a href="/">Deliveries</a>
+      <a href="/">Returns and refunds</a>
+      <a href="/">Ordering help</a>
+      <a href="/">Security and Privacy</a>
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <p class="footer-title">Delivery and return</p>
+    <div class="footer-section-content">
+      <a href="/">Meet The Team</a>
+      <a href="/">Press</a>
+      <a href="/">Careers</a>
+      <a href="/">Life @OpenDeal$</a>
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <p class="footer-title">Contact us</p>
+    <div class="footer-section-content">
+      <a href="/">Meet the team</a>
+      <a href="/">Press</a>
+      <a href="/">Careers</a>
+      <a href="/">Life @OpenDeal$</a>
+    </div>
+  </div>
+
+</footer>
+<!-- END OF FOOTER SECTION -->
+
+<!-- BOTTOM IMAGE -->
+<div class="bottom-images">
+  <img src="public/img/mastercard.png" alt="mastercard">
+  <img src="public/img/blue.png" alt="blue">
+  <img src="public/img/visa.png" alt="visa">
+  <img src="public/img/paypal.png" alt="paypal">
+  <img src="public/img/verified.png" alt="verified">
+</div>
+<!-- END OF BOTTOM IMAGE SECTION -->
+</div>
+<!-- All javascript calls go here for optimal loading -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-resource.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angular_material/0.7.1/angular-material.min.js"></script>
+  <script src="public/js/app.js"></script>
+
+</body>
+</html>

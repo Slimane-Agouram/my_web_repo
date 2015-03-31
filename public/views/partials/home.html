@@ -1,0 +1,93 @@
+<div class="ariane-thread" ng-controller="ArianeCtrl">
+  <ul>
+    <span ng-repeat="location in locations">
+      <li>
+        <a ng-href="/#/{{location.url}}"><p ng-class="{arianeHere: $last}">{{location.name}}</p></a>
+      </li>
+      <li ng-hide="$last">
+        <i class="icon ion-ios-arrow-thin-right"></i>
+      </li>
+    </span>
+  </ul>
+</div>
+
+<div class="category-box" ng-controller="CategoryController">
+  <p class="category-box-title">Shop by</p>
+  <div class="category-box-content">
+    <p>Category</p>
+    <ul>
+      <li ng-repeat="category in categories" ng-class="{categorySelected: category.selected}">
+        <md-button ng-click="selectCategory(category.name)">
+          <i ng-show="category.selected" class="icon ion-ios-arrow-forward"> </i>
+          {{category.name}} ({{category.count}})
+        </md-button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<div class="content" ng-controller="ItemListController">
+
+  <div class="presentation-box">
+    <div class="presentation-box-top">
+      <p class="presentation-box-top-title">Vulputate adipiscing</p>
+      <p class="presentation-box-top-text">
+        <md-button ng-click="toggleHideOptions()">
+          Hide Option
+          <i class="icon ion-android-arrow-down"></i>
+        </md-button>
+      </p>
+    </div>
+    <div class="presentation-box-separation"></div>
+    <div class="presentation-box-bottom" ng-hide="optionsHidden">
+      <i class="presentation-box-windows icon ion-ios-list-outline"></i>
+
+      <div class="presentation-box-controls">
+        <div class="presentation-box-show">
+          Show:
+          <select>
+            <option value="12">12 per page</option>
+          </select>
+        </div>
+        <div class="presentation-box-sort">
+          Sort by:
+
+          <select ng-model="sortCriteria">
+            <option ng-repeat="sort in sorts" ng-value="sort">{{sort}}</option>
+          </select>
+
+          <md-button ng-click="sortReverse = !sortReverse" class="sort-reverse">
+            <i class="icon ion-android-arrow-up" ng-show="!sortReverse"></i>
+            <i class="icon ion-android-arrow-down" ng-show="sortReverse"></i>
+          </md-button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="item-list">
+    <div class="item" ng-repeat="item in items | orderBy:sortCriteria:sortReverse">
+      <div class="item-img">
+        <img ng-src="{{item.image}}" alt="item image">
+        <button class="item-quick-shop-btn">QUICK SHOP</button>
+      </div>
+      <div class="item-info">
+        <p class="item-info-text">{{item.name}}: {{item.description}}</p>
+        <p class="item-info-price">{{item.price | currency}}</p>
+      </div>
+      <div class="item-controls">
+        <md-button class="md-raised md-warn" ng-click="addToCart(item)">Add to panier</md-button>
+        <div class="item-controls-icons">
+          <a href="/"><img src="public/img/plus.png"  alt="plus"></a>
+          <a href="/"><img src="public/img/download.png"  alt="download"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

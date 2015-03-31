@@ -1,0 +1,72 @@
+<div class="ariane-thread" ng-controller="ArianeCtrl">
+  <ul>
+    <span ng-repeat="location in locations">
+      <li>
+        <a ng-href="/#/{{location.url}}"><p ng-class="{arianeHere: $last}">{{location.name}}</p></a>
+      </li>
+      <li ng-hide="$last">
+        <i class="icon ion-ios-arrow-thin-right"></i>
+      </li>
+    </span>
+  </ul>
+</div>
+
+<div class="panier-messages">
+  <p>
+    <i class="icon ion-checkmark"></i>
+    "Lorem ipsum" was successfully added to your shopping panier
+  </p>
+</div>
+
+<div class="panier-empty" ng-show="isEmpty()">
+  Your panier is currently empty. Go add items to it!
+</div>
+
+<table class="panier-detail" ng-hide="isEmpty()">
+  <thead>
+    <tr>
+      <th scope="col">Product Name</th>
+      <th scope="col">Unit Price</th>
+      <th scope="col">Qty</th>
+      <th scope="col">Subtotal</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr ng-repeat="item in items">
+
+      <td class="panier-name-col">
+        <div class="panier-item-img-container">
+          <div class="panier-item-img">
+            <img ng-src="{{item.image}}" alt="item image">
+          </div>
+        </div>
+        <div class="panier-item-name-container">
+          <p class="panier-item-name">{{item.name}}</p>
+        </div>
+        <div class="panier-item-edit-container">
+          <md-button class="panier-item-edit">Edit</md-button>
+        </div>
+      </td>
+      <td class="panier-price-col">{{item.price | currency}}</td>
+      <td class="panier-quantity-col">
+        <input type="number" ng-model="item.quantity" ng-change="updateTotalPrice()">
+      </td>
+      <td class="panier-subtotal-col">{{item.price * item.quantity | currency}}</td>
+      <td class="panier-delete-col">
+        <md-button class="panier-item-delete" ng-click="remove(item.name)">x</md-button>
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+<div class="panier-total-price" ng-hide="isEmpty()">
+  <p>Total price: {{totalPrice | currency}}</p>
+</div>
+
+<div class="panier-controls">
+  <a href="/#/"><md-button class="panier-continue-btn">CONTINUE SHOPPING</md-button></a>
+  <md-button class="md-warn md-raised panier-update-btn">UPDATE SHOPPING CART</md-button>
+</div>

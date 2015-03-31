@@ -1,0 +1,134 @@
+<div class="ariane-thread" ng-controller="ArianeCtrl">
+  <ul>
+    <span ng-repeat="location in locations">
+      <li>
+        <a ng-href="/#/{{location.url}}"><p ng-class="{arianeHere: $last}">{{location.name}}</p></a>
+      </li>
+      <li ng-hide="$last">
+        <i class="icon ion-ios-arrow-thin-right"></i>
+      </li>
+    </span>
+  </ul>
+</div>
+
+<div id="checkout-progress" class="category-box">
+  <p class="category-box-title">Checkout Progress</p>
+  <div class="category-box-content">
+    <ul>
+      <li>Billing Adress</li>
+      <li>Shipping Adress</li>
+      <li>Shipping Method</li>
+      <li>Payment Method</li>
+    </ul>
+  </div>
+</div>
+
+<div class="checkout-content">
+  <div id="checkout-method">
+    <div class="checkout-method-title">
+      <div class="square-title">1</div>
+      <p>CHECKOUT METHOD</p>
+    </div>
+    <p id="checkout-method-subtitle">Checkout as a guest or register</p>
+    <div id="checkkout-method-content">
+      <p>Register with us for further convenience:</p>
+
+      <div id="checkout-method-radio-form">
+        <p><input type="radio" value="guest"> Checkout as a Guest</p>
+        <p><input type="radio" value="register"> Register</p>
+      </div>
+
+      <p>Register and save time!</p>
+      <p>Register with us for further convenience</p>
+
+      <div id="checkout-method-list">
+        <p><i class="icon ion-ios-arrow-right"></i> Checkout as a guest</p>
+        <p><md-button ng-click="toggleRegisterForm()"><i class="icon ion-ios-arrow-right"></i> Register</md-button></p>
+      </div>
+
+      <form name="formRegister" ng-show="showRegisterForm" class="form-register">
+        <md-content class="padding">
+          <md-input-container md-no-float>
+            <i class="icon ion-person"></i>
+            <input ng-model="user.name" type="text" placeholder="Name" required>
+          </md-input-container>
+
+          <md-input-container md-no-float>
+            <i class="icon ion-ios-telephone"></i>
+            <input ng-model="user.phone" type="text" placeholder="Phone Number" required>
+          </md-input-container>
+
+          <md-input-container md-no-float>
+            <i class="icon ion-email"></i>
+            <input ng-model="user.email" type="email" placeholder="Email" required>
+          </md-input-container>
+
+          <md-input-container md-no-float>
+            <i class="icon ion-home"></i>
+            <input ng-model="user.address" type="text" placeholder="Address" required>
+          </md-input-container>
+
+          <md-input-container md-no-float>
+            <i class="icon ion-android-send"></i>
+            <input ng-model="user.deliveryAddress" type="text" placeholder="Delivery address" required>
+          </md-input-container>
+
+          <md-input-container md-no-float>
+            <i class="icon ion-social-usd"></i>
+            <input ng-model="user.billingAddress" type="text" placeholder="Billing address" required>
+          </md-input-container>
+
+          <md-input-container md-no-float>
+            <i class="icon ion-unlocked"></i>
+            <input ng-model="user.password" type="password" placeholder="Password">
+          </md-input-container>
+        </md-content>
+      </form>
+
+      <md-button class="md-raised md-warn" ng-click="register()">Continue</md-button>
+    </div>
+  </div>
+
+  <div id="checkout-login">
+    <p id="checkout-login-title">Login</p>
+    <p>Already registered? Please login below:</p>
+
+    <form name="login-form" id="checkout-login-form">
+      <div id="checkout-login-form-email">
+        <label for="email">Email Address:</label>
+        <p><input name="email" type="email" placeholder="john.doe@mail.com" ng-model="email" required></p>
+      </div>
+      <div id="checkout-login-form-password">
+        <label for="password">Password:</label>
+        <p><input name="password" type="password" ng-model="password" required></p>
+      </div>
+
+      <md-button id="login-btn" class="md-raised md-warn" ng-click="login()">LOGIN</md-button>
+    </form>
+  </div>
+
+  <div id="checkout-list">
+    <ul>
+      <li>
+        <div class="square">2</div>
+        <p>BILLING INFORMATION</p>
+      </li>
+      <li>
+        <div class="square">3</div>
+        <p>SHIPPING INFORMATION</p>
+      </li>
+      <li>
+        <div class="square">4</div>
+        <p>SHIPPING METHOD</p>
+      </li>
+      <li>
+        <div class="square">5</div>
+        <p>PAYMENT INFORMATION</p>
+      </li>
+      <li>
+        <div class="square">6</div>
+        <p>ORDER REVIEW</p>
+      </li>
+    </ul>
+  </div>
+</div>

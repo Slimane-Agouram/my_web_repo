@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Best pen in the world",
+    "description": "A pen for life",
+    "price": 10,
+    "category": "work",
+    "image": "http://upload.wikimedia.org/wikipedia/commons/e/e1/03-BICcristal2008-03-26.jpg"
+  },
+  {
+    "name": "Ferrari very cheap",
+    "description": "A fake Ferrari",
+    "price": 100,
+    "category": "car",
+    "image": "http://blogs-images.forbes.com/markewing/files/2014/12/Ferrari-Sergio3_4antSX-1940x1017.jpg"
+  },
+  {
+    "name": "Call of Duty",
+    "description": "A new one every year",
+    "price": 50,
+    "category": "game",
+    "image": "http://upload.wikimedia.org/wikipedia/en/d/db/Modern_Warfare_2_cover.PNG"
+  },
+  {
+    "name": "AK 47",
+    "description": "Much resistance, very solid",
+    "price": 700,
+    "category": "toy",
+    "image": "http://wp.patheos.com.s3.amazonaws.com/blogs/kathyschiffer/files/2012/04/Toy-Gun.jpg"
+  },
+  {
+    "name": "Battlefield",
+    "description": "It's in the game",
+    "price": 60,
+    "category": "game",
+    "image": "http://upload.wikimedia.org/wikipedia/en/6/69/Battlefield_3_Game_Cover.jpg"
+  },
+  {
+    "name": "Lava lamp",
+    "description": "Go back to the 70s",
+    "price": 40,
+    "category": "home",
+    "image": "http://www.spiritedprophire.co.uk/wp-content/uploads/2013/02/Event-Lighting-Hire-Large-Lava-Lamp-Hire.jpg"
+  }
+]

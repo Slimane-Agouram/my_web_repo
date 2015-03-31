@@ -1,0 +1,22 @@
+[
+  {
+    "name": "work",
+    "count": 1
+  },
+  {
+    "name": "car",
+    "count": 1
+  },
+  {
+    "name": "game",
+    "count": 2
+  },
+  {
+    "name": "toy",
+    "count": 1
+  },
+  {
+    "name": "home",
+    "count": 1
+  }
+]
