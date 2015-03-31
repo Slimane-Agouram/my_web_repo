@@ -7,7 +7,7 @@
     "image": "http://i.luxury-insider.com/uploads/features/2012/04/guide-how-to-care-for-leather-shoes_2.jpg"
   },
   {
-    "name": "Macbook Pro 13 inch",
+    "name": "Macbook Pro 13``",
     "description": "Apple product",
     "price": 1000,
     "category": "work",
@@ -15,7 +15,7 @@
   },
   {
     "name": "Nintendo DS",
-    "description": "Great mobile game console",
+    "description": "Great game console",
     "price": 150,
     "category": "game",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Nintendo-DS-Fat-Blue.jpg/500px-Nintendo-DS-Fat-Blue.jpg"
@@ -35,7 +35,7 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/SC06_2006_Aston_Martin_DB9_Volante.jpg/440px-SC06_2006_Aston_Martin_DB9_Volante.jpg"
   },
   {
-    "name": "IKEA Dekstop",
+    "name": "Dekstop",
     "description":"White IKEA Desktop",
     "price": 400,
     "category": "home",
