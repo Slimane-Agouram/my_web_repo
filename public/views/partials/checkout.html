@@ -34,8 +34,8 @@
       <p>Register with us for further convenience:</p>
 
       <div id="checkout-method-radio-form">
-        <p><input type="radio" value="guest"> Checkout as a Guest</p>
-        <p><input type="radio" value="register"> Register</p>
+        <p><input type="radio" name="checkout-type" value="guest" ng-model="guest" ng-change="check(guest)"/> Checkout as a Guest</p>
+        <p><input type="radio" value="register" name="checkout-type" ng-model="new_customer" ng-change="check(new_customer)"/> Register</p>
       </div>
 
       <p>Register and save time!</p>
@@ -43,49 +43,44 @@
 
       <div id="checkout-method-list">
         <p><i class="icon ion-ios-arrow-right"></i> Checkout as a guest</p>
-        <p><md-button ng-click="toggleRegisterForm()"><i class="icon ion-ios-arrow-right"></i> Register</md-button></p>
+        <p><i class="icon ion-ios-arrow-right"></i> REGISTER</p>
+
       </div>
 
       <form name="formRegister" ng-show="showRegisterForm" class="form-register">
         <md-content class="padding">
           <md-input-container md-no-float>
-            <i class="icon ion-person"></i>
-            <input ng-model="user.name" type="text" placeholder="Name" required>
+            <p>Name:</p>
+            <input ng-model="user.name" type="text"  required>
           </md-input-container>
 
           <md-input-container md-no-float>
-            <i class="icon ion-ios-telephone"></i>
-            <input ng-model="user.phone" type="text" placeholder="Phone Number" required>
+            <p>Phone:</p>
+            <input ng-model="user.phone" type="text" required>
           </md-input-container>
 
           <md-input-container md-no-float>
-            <i class="icon ion-email"></i>
-            <input ng-model="user.email" type="email" placeholder="Email" required>
+            <p>Email:</p>
+            <input ng-model="user.email" type="email" required>
           </md-input-container>
 
           <md-input-container md-no-float>
-            <i class="icon ion-home"></i>
-            <input ng-model="user.address" type="text" placeholder="Address" required>
+            <p>Adress:</p>
+            <input ng-model="user.address" type="text" required>
           </md-input-container>
 
-          <md-input-container md-no-float>
-            <i class="icon ion-android-send"></i>
-            <input ng-model="user.deliveryAddress" type="text" placeholder="Delivery address" required>
-          </md-input-container>
 
           <md-input-container md-no-float>
-            <i class="icon ion-social-usd"></i>
-            <input ng-model="user.billingAddress" type="text" placeholder="Billing address" required>
+            <p>Password:</p>
+            <input ng-model="user.password" type="password" >
           </md-input-container>
-
-          <md-input-container md-no-float>
-            <i class="icon ion-unlocked"></i>
-            <input ng-model="user.password" type="password" placeholder="Password">
-          </md-input-container>
+          <!-- <div id="checkout-login-submit">
+            <p><md-button name="submit" type="submit" ng-click="register()">register</md-button></p>
+          </div> -->
         </md-content>
       </form>
 
-      <md-button class="md-raised md-warn" ng-click="register()">Continue</md-button>
+      <md-button class="md-raised md-warn" ng-click="toggleRegisterForm()" >Continue</md-button>
     </div>
   </div>
 
@@ -96,7 +91,7 @@
     <form name="login-form" id="checkout-login-form">
       <div id="checkout-login-form-email">
         <label for="email">Email Address:</label>
-        <p><input name="email" type="email" placeholder="john.doe@mail.com" ng-model="email" required></p>
+        <p><input name="email" type="email" placeholder="test@test.com" ng-model="email" required></p>
       </div>
       <div id="checkout-login-form-password">
         <label for="password">Password:</label>

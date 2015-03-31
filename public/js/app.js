@@ -11,9 +11,9 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
       templateUrl: 'public/views/partials/home.html',
       controller: 'HomeController',
     })
-    .state('panier', {
-      url: '/panier',
-      templateUrl: 'public/views/partials/panier.html',
+    .state('cart', {
+      url: '/cart',
+      templateUrl: 'public/views/partials/cart.html',
       controller: 'PanierController',
     })
     .state('checkout', {
@@ -62,10 +62,8 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
 
   $scope.addToCart = function(item){
     PanierController.add(item);
-    ToastService.simpleToast('"' + item.name + '"' + ' was added to your panier.');
-    //HACK: scroll to top to see toast. Fix it by telling the toast what its parent is.
-    //$location.hash('header');
-    //$anchorScroll();
+    ToastService.simpleToast('"' + item.name + '"' + ' was added to your cart.');
+
   };
 
 
@@ -100,17 +98,58 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
     password: ''
   };
 
-  $scope.register = function(){
-    if($scope.formRegister.$valid){
-      ToastService.simpleToast('Welcome ' + $scope.user.email + ' !');
-    } else {
-      ToastService.simpleToast('The form is not valid, fields are missing');
+  // $scope.register = function(){
+  //   if($scope.formRegister.$valid){
+  //     ToastService.simpleToast('Welcome ' + $scope.user.email + ' !');
+  //   } else {
+  //     ToastService.simpleToast('The form is not valid, fields are missing');
+  //   }
+  // };
+
+  $scope.check= function(model){
+    if(model=='guest')
+    {
+      if($scope.guest=='guest')
+      {
+        $scope.new_customer=undefined;
+        $scope.showRegisterForm=false;
+
+      }
+      else
+      {
+        $scope.new_customer='register';
+      }
+    }
+    else
+    {
+      if($scope.new_customer=='register')
+      {
+        $scope.guest=undefined;
+        $scope.showRegisterForm=true;
+      }
+      else
+      {
+        $scope.guest='guest';
+      }
+
     }
   };
 
   $scope.showRegisterForm = false;
   $scope.toggleRegisterForm = function(){
-    $scope.showRegisterForm = ! $scope.showRegisterForm;
+    if($scope.guest=='guest')
+    {
+      ToastService.simpleToast('You can step in as a Guest now!');
+    }
+    else
+    {
+      $scope.showRegisterForm = true;
+      if($scope.formRegister.$valid){
+        ToastService.simpleToast('Welcome ' + $scope.user.email + ' !');
+      } else {
+        ToastService.simpleToast('The form is not valid, fields are missing');
+      }
+    }
   };
 
 })
@@ -176,7 +215,7 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
 
 .controller('HeaderController', function($scope, PanierController){
   $scope.$watch(PanierController.get, function(oldValue, newValue){
-      $scope.panierCount = PanierController.get().length;
+      $scope.cartCount = PanierController.get().length;
   }, true);
 
 
