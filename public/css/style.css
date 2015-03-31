@@ -412,7 +412,7 @@ body {
   color: red;
   text-transform: uppercase;
   margin-bottom: 25px;
-  margin-top: 300px;
+  margin-top: 30px;
 }
 
 .footer-section-text {
@@ -427,7 +427,7 @@ body {
 
 footer {
   /*text-align: center;*/
-  margin-top: 60px;
+
   display: inline-block;
   text-align: left;
   background-color: white;
