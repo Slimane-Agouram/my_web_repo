@@ -1,44 +1,44 @@
 [
   {
-    "name": "Best pen in the world",
-    "description": "A pen for life",
-    "price": 10,
+    "name": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/MarikinaRiverBankShoesjf9425_30.JPG/440px-MarikinaRiverBankShoesjf9425_30.JPG",
+    "description": "Great italian leather shoes",
+    "price": 100,
     "category": "work",
     "image": "http://upload.wikimedia.org/wikipedia/commons/e/e1/03-BICcristal2008-03-26.jpg"
   },
   {
-    "name": "Ferrari very cheap",
-    "description": "A fake Ferrari",
-    "price": 100,
-    "category": "car",
-    "image": "http://blogs-images.forbes.com/markewing/files/2014/12/Ferrari-Sergio3_4antSX-1940x1017.jpg"
+    "name": "Brand new Macbook Pro 13 inch",
+    "description": "State of the art technology in a 3 pound of majesty ",
+    "price": 1000,
+    "category": "work",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/MacBook_white.png/450px-MacBook_white.png"
   },
   {
-    "name": "Call of Duty",
-    "description": "A new one every year",
-    "price": 50,
+    "name": "Nintendo DS",
+    "description": "Great mobile game console for everyday use",
+    "price": 150,
     "category": "game",
-    "image": "http://upload.wikimedia.org/wikipedia/en/d/db/Modern_Warfare_2_cover.PNG"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Nintendo-DS-Fat-Blue.jpg/500px-Nintendo-DS-Fat-Blue.jpg"
   },
   {
-    "name": "AK 47",
-    "description": "Much resistance, very solid",
-    "price": 700,
+    "name": "Children Toy",
+    "description": "Increase your child imagination and creativity",
+    "price": 80,
     "category": "toy",
-    "image": "http://wp.patheos.com.s3.amazonaws.com/blogs/kathyschiffer/files/2012/04/Toy-Gun.jpg"
+    "image": "http://www.child-development-guide.com/image-files/importance-of-toys-for-children.jpg"
   },
   {
-    "name": "Battlefield",
-    "description": "It's in the game",
-    "price": 60,
-    "category": "game",
-    "image": "http://upload.wikimedia.org/wikipedia/en/6/69/Battlefield_3_Game_Cover.jpg"
+    "name": "Aston Martin DB9",
+    "description": "Upgrade your ride, get James Bond's ride. Classy and stylish british sport car.",
+    "price": 60000,
+    "category": "car",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/SC06_2006_Aston_Martin_DB9_Volante.jpg/440px-SC06_2006_Aston_Martin_DB9_Volante.jpg"
   },
   {
-    "name": "Lava lamp",
-    "description": "Go back to the 70s",
-    "price": 40,
+    "name": "IKEA Dekstop",
+    "description":"Great White IKEA Desktop. Swedish expertise at your own house.",
+    "price": 400,
     "category": "home",
-    "image": "http://www.spiritedprophire.co.uk/wp-content/uploads/2013/02/Event-Lighting-Hire-Large-Lava-Lamp-Hire.jpg"
+    "image": "http://prettyprovidence.com/wp-content/uploads/2014/01/ikea-hack-desk-1.jpg"
   }
 ]
