@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Italian Shoes",
+    "description": "Italian leather shoes",
+    "price": 100,
+    "category": "work",
+    "image": "http://i.luxury-insider.com/uploads/features/2012/04/guide-how-to-care-for-leather-shoes_2.jpg"
+  },
+  {
+    "name": "Macbook Pro 13``",
+    "description": "Apple product",
+    "price": 1000,
+    "category": "work",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/MacBook_white.png/450px-MacBook_white.png"
+  },
+  {
+    "name": "Nintendo DS",
+    "description": "Great game console",
+    "price": 150,
+    "category": "game",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Nintendo-DS-Fat-Blue.jpg/500px-Nintendo-DS-Fat-Blue.jpg"
+  },
+  {
+    "name": "Children Toy",
+    "description": "For your child creativity",
+    "price": 80,
+    "category": "toy",
+    "image": "http://www.child-development-guide.com/image-files/importance-of-toys-for-children.jpg"
+  },
+  {
+    "name": "Aston Martin DB9",
+    "description": "James Bond's ride",
+    "price": 60000,
+    "category": "car",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/SC06_2006_Aston_Martin_DB9_Volante.jpg/440px-SC06_2006_Aston_Martin_DB9_Volante.jpg"
+  },
+  {
+    "name": "Dekstop",
+    "description":"White IKEA Desktop",
+    "price": 400,
+    "category": "home",
+    "image": "http://prettyprovidence.com/wp-content/uploads/2014/01/ikea-hack-desk-1.jpg"
+  }
+]

@@ -180,30 +180,81 @@ body {
   background-color: black;
   text-transform: uppercase;
   color: white;
-  padding: 10px;
+  padding: 30px;
+  color: white;
+  z-index: 100;
+  border:1px solid #2a2c2f; -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size:18px;
+  font-family:arial, helvetica, sans-serif;
+  padding: 10px 25px 10px 25px;
+  text-decoration:none;
+  /*display:inline-block;*/
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+  font-weight:bold; color: #FFFFFF;
+ background-color: #45484d;
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#45484d), to(#000000));
+ background-image: -webkit-linear-gradient(top, #45484d, #000000);
+ background-image: -moz-linear-gradient(top, #45484d, #000000);
+ background-image: -ms-linear-gradient(top, #45484d, #000000);
+ background-image: -o-linear-gradient(top, #45484d, #000000);
+ background-image: linear-gradient(to bottom, #45484d, #000000);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#45484d, endColorstr=#000000);
+
 }
 
 .category-box-content {
-  margin: 10px;
+  margin-left: 10px;
 
 }
 
 .category-box-content li {
-  padding-bottom: 12px;
+  padding-bottom: 2px;
+  font-size:15px;
 
 }
 
 .category-box-content > p {
   text-transform: uppercase;
   font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-
 
 .category-box-content > ul {
   list-style: none;
 }
+
+.search-input{
+  padding: 0px 10px;
+  line-height: 27px;
+}
+
+
+
+.category-box-content-checkout {
+  margin-left: 10px;
+
+}
+
+.category-box-content-checkout li {
+  padding-bottom: 10px;
+
+}
+
+.category-box-content-checkout > p {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.category-box-content-checkout > ul {
+  padding-top:10px;
+  list-style: none;
+}
+
+
 
 .categorySelected {
   font-weight: bold;
@@ -237,6 +288,7 @@ body {
   font-weight: bold;
   float: left;
   margin-left: 10px;
+  padding:5px
 
 }
 
@@ -259,22 +311,26 @@ body {
 .presentation-box-bottom {
   display: block;
   height: 40px;
+  margin-left:15px;
 }
 
 .presentation-box-controls {
   display: inline-block;
-
+  margin-left:150px
   width: 500px;
-  margin-right: 20px;
+  /*margin-right: 20px;*/
 }
 
 .presentation-box-show {
   display: inline-block;
-  margin-right: 50px;
+  margin-left: 50px;
+  /*position:relative;*/
+
 }
 
 .presentation-box-sort {
   display: inline-block;
+  margin-left:70px;
 }
 
 .sort-reverse i {
@@ -358,8 +414,12 @@ body {
 
 
 .item-info-text {
-  color: blue;
+  color: black;
   margin-top: 20px;
+}
+.item-info-text:hover {
+  color:blue;
+  cursor: pointer;
 }
 
 .item-info-price {
@@ -417,6 +477,7 @@ body {
 
 .footer-section-text {
   color: #7f7f7f;
+
 }
 
 .footer-section-text-title {
@@ -427,7 +488,7 @@ body {
 
 footer {
   /*text-align: center;*/
-
+  box-shadow: 0 -5px 5px -5px #333;
   display: inline-block;
   text-align: left;
   background-color: white;
@@ -705,6 +766,24 @@ a:hover {
   background-color: black;
   color: white;
   width: 180px;
+  border:1px solid #2a2c2f; -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size:12px;
+  font-family:arial, helvetica, sans-serif;
+  padding: 7px 25px 7px 15px;
+  text-decoration:none;
+  /*display:inline-block;*/
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+  font-weight:bold; color: #FFFFFF;
+ background-color: #45484d;
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#45484d), to(#000000));
+ background-image: -webkit-linear-gradient(top, #45484d, #000000);
+ background-image: -moz-linear-gradient(top, #45484d, #000000);
+ background-image: -ms-linear-gradient(top, #45484d, #000000);
+ background-image: -o-linear-gradient(top, #45484d, #000000);
+ background-image: linear-gradient(to bottom, #45484d, #000000);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#45484d, endColorstr=#000000);
+
 }
 
 .cart-update-btn {
@@ -715,7 +794,7 @@ a:hover {
 .cart-messages {
   width: 100%;
   color: white;
-  background-color: #8bace8;
+  background-color: #83BFFB;
   height: 30px;
   margin-bottom: 15px;
   margin-top: 15px;
@@ -862,4 +941,35 @@ a:hover {
   width: 80%;
   display: inline-block;
 
+}
+
+.MyName {
+  font-size:18px;
+  font-style:oblique;
+  align-content:center;
+  font-weight: 300;
+}
+
+.select_number{
+  background: transparent;
+   /*padding: 2px;
+   font-size: 16px;
+   width:120px;
+   line-height: 1;
+   border: 1;
+   border-radius: 0;
+   -webkit-appearance: none;*/
+}
+
+.sortby_class{
+  background: transparent;
+
+}
+
+
+
+.icone_awesome{
+  color: #FA0039;
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 1.5em;
 }

@@ -34,27 +34,27 @@
     <div class="presentation-box-top">
       <p class="presentation-box-top-title">Vulputate adipiscing</p>
       <p class="presentation-box-top-text">
-        <md-button ng-click="toggleHideOptions()">
-          Hide Option
+        <md-button ng-click="toggleHideOptions(hide_option)"  class="MyShowButton">
+          {{hide_option}}
           <i class="icon ion-android-arrow-down"></i>
         </md-button>
       </p>
     </div>
     <div class="presentation-box-separation"></div>
     <div class="presentation-box-bottom" ng-hide="optionsHidden">
-      <i class="presentation-box-windows icon ion-ios-list-outline"></i>
-
+      <i id="icone_awesome" class="fa fa-th-large" style="color:#939393" ></i>
+      <i class="fa fa-list-ul" style="color:#FA0039;"></i>
       <div class="presentation-box-controls">
         <div class="presentation-box-show">
           Show:
-          <select>
+          <select class="select_number">
             <option value="12">12 per page</option>
           </select>
         </div>
         <div class="presentation-box-sort">
           Sort by:
 
-          <select ng-model="sortCriteria">
+          <select class="sortby_class" ng-model="sortCriteria">
             <option ng-repeat="sort in sorts" ng-value="sort">{{sort}}</option>
           </select>
 
@@ -73,10 +73,10 @@
     <div class="item" ng-repeat="item in items | orderBy:sortCriteria:sortReverse">
       <div class="item-img">
         <img ng-src="{{item.image}}" alt="item image">
-        <button class="item-quick-shop-btn">QUICK SHOP</button>
+        <button class="item-quick-shop-btn" ng-click="QuickAdd(item)">QUICK SHOP</button>
       </div>
       <div class="item-info">
-        <p class="item-info-text">{{item.name}}: {{item.description}}</p>
+        <p class="item-info-text">{{item.name}}:{{item.description}}</p>
         <p class="item-info-price">{{item.price | currency}}</p>
       </div>
       <div class="item-controls">

@@ -28,7 +28,7 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
 // CONTROLLERS SECTION///////////////////////////////////////////////////////////////////////////
 
 
-.controller('ItemListController', function($scope, ItemService, CategoryService, SearchService){
+.controller('ItemListController', function($scope, ItemService, CategoryService, SearchService, hide_ShowService){
   $scope.$watch(CategoryService.getFilter, function(oldValue, newValue){
       $scope.items = ItemService.query();
   });
@@ -36,7 +36,10 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
   $scope.$watch(SearchService.getSearch, function(oldValue, newValue){
       $scope.items = ItemService.query();
   });
-
+  $scope.hide_option=hide_ShowService.getHide_ShowStatus();
+  $scope.$watch(hide_ShowService.getHide_ShowStatus,function(oldValue, newValue){
+    $scope.hide_option=hide_ShowService.getHide_ShowStatus();
+  });
   $scope.sorts = [
     'price',
     'name',
@@ -47,7 +50,7 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
 
 })
 
-.controller('HomeController', function($scope, $anchorScroll, $location, ArianeService, PanierController, ToastService){
+.controller('HomeController', function($scope, $anchorScroll, $location, ArianeService, PanierController, ToastService, sharedProperties,hide_ShowService){
   ArianeService
     .clear()
     .add('Home', '')
@@ -56,14 +59,37 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
 
   $scope.optionsHidden = false;
 
-  $scope.toggleHideOptions = function(){
+  $scope.toggleHideOptions = function(hideStatus){
+    if(hideStatus=='Hide Option')
+    {
+      hide_ShowService.setHide_ShowStatus('Show Option');
+    }
+    else
+    {
+      hide_ShowService.setHide_ShowStatus('Hide Option');
+    }
     $scope.optionsHidden = !$scope.optionsHidden;
+
+    if(hide_ShowService.getHide_ShowStatus() == 'Hide Option')
+    {
+      hide_ShowService.setHide_ShowStatus('Hide Option');
+    }
+    else
+    {
+      hide_ShowService.setHide_ShowStatus('Show Option');
+    }
   };
 
   $scope.addToCart = function(item){
+    sharedProperties.setLatestProductName(item.name);
     PanierController.add(item);
     ToastService.simpleToast('"' + item.name + '"' + ' was added to your cart.');
 
+  };
+
+  $scope.QuickAdd = function(item){
+    $scope.addToCart(item);
+    $location.path("cart");
   };
 
 
@@ -154,12 +180,23 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
 
 })
 
-.controller('PanierController', function($scope, ArianeService, PanierController){
+.controller('PanierController', function($scope, ArianeService, PanierController, sharedProperties){
   ArianeService
     .clear()
     .add('Home', '')
     .add('His', '')
     .add('Cart', '');
+    $scope.lastProduct = sharedProperties.getLatestProductName();
+    if(PanierController.get().length == 0)
+    {
+      $scope.showCartMessage = false;
+
+    }
+    else
+    {
+      $scope.showCartMessage = true;
+
+    }
 
   var getTotalPrice = function(){
     var res = 0;
@@ -171,7 +208,10 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
     return res;
   };
 
+
+
   $scope.items = PanierController.get();
+
 
   $scope.isEmpty = function(){
     return $scope.items.length === 0;
@@ -180,6 +220,11 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
   $scope.remove = function(itemName){
     $scope.items = PanierController.remove(itemName).get();
     $scope.updateTotalPrice();
+    if($scope.isEmpty)
+    {
+      $scope.showCartMessage = false;
+
+    }
   };
 
   $scope.totalPrice = getTotalPrice();
@@ -202,9 +247,12 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
 })
 
 .controller('CategoryController', function($scope, CategoryService){
+  $scope.showMe=false;
   $scope.categories = CategoryService.query();
+
   $scope.selectCategory = function(categoryName){
     CategoryService.setFilter(categoryName, $scope);
+
   };
 })
 
@@ -378,5 +426,33 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
     }
   };
 })
+
+
+.service('sharedProperties', function () {
+        var latestProductAdded = '';
+
+        return {
+            getLatestProductName: function () {
+                return latestProductAdded;
+            },
+            setLatestProductName: function(value) {
+                latestProductAdded = value;
+            }
+        };
+    })
+
+.service('hide_ShowService', function () {
+            var hide_show = 'Hide Option';
+
+            return {
+                getHide_ShowStatus: function () {
+                    return hide_show;
+                },
+                setHide_ShowStatus: function(value) {
+                  hide_show = value;
+                }
+            };
+        });
+
 
 ;
