@@ -140,6 +140,7 @@ body {
 .cart-number a{
   color: white;
   font-size: 3em;
+  font-weight:600;
 }
 
 .cart-text {
@@ -160,10 +161,12 @@ body {
 
 .header-box-title {
   color: #9e9e9e;
+  font-weight:600;
 }
 
 .header-box-text {
   color: #757575;
+  letter-spacing:-1px;
 }
 
 .category-box {
@@ -285,10 +288,11 @@ body {
 .presentation-box-top-title {
   color: #FA0039;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 900;
+  font-size:18px;
   float: left;
   margin-left: 10px;
-  padding:5px
+  padding:2px
 
 }
 
@@ -299,6 +303,7 @@ body {
 
 .presentation-box-top-text button {
   max-height: 35px;
+  font-size:14px;
 }
 
 .presentation-box-separation {
@@ -424,6 +429,7 @@ body {
 
 .item-info-price {
   color: #FA0039;
+  font-weight: 900;
   margin-top: 15px;
 }
 
@@ -469,10 +475,11 @@ body {
 
 
 .footer-title {
-  color: red;
+  color: #FA0038;
   text-transform: uppercase;
-  margin-bottom: 25px;
-  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  font-weight: 900;
 }
 
 .footer-section-text {
@@ -483,6 +490,11 @@ body {
 .footer-section-text-title {
   color: black;
   margin-bottom: 15px;
+}
+
+.footer-section-text-about{
+  color: #7f7f7f;
+  margin-bottom: 0px;
 }
 
 
@@ -540,12 +552,13 @@ a:hover {
 .toolbar ul {
   list-style: none;
   display: inline-block;
+  font-weight:900;
 }
 
 .toolbar li {
   display: inline-block;
   margin-right: 40px;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .toolbar a {
@@ -577,6 +590,7 @@ a:hover {
 .ads {
   background-color: white;
   width: 100%;
+  height:64px;
   padding-top: 1em;
   padding-bottom: 1em;
   border: 1px solid #afafaf;
@@ -591,6 +605,7 @@ a:hover {
   display: inline-block;
   margin-right: 120px;
   margin-left: 10px;
+  font-weight:600;
 }
 
 .ads img {
@@ -607,6 +622,7 @@ a:hover {
   margin-top: 15px;
   margin-bottom: 15px;
   text-transform: uppercase;
+  font-size:14px;
 }
 
 .ariane-thread ul {
@@ -750,10 +766,17 @@ a:hover {
 .button-personalized {
   border: none;
   background: none;
-  	padding:		10px 20px !important;
+  	/*padding:		10px 20px !important;*/
+    padding-top: 10px;
+    padding-right: 2px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-left: 2px;
   	font-size:		14px !important;
   	background-color:	#FA0039;
     color: white;
+    width:100px;
 }
 
 .md-raised md-warn {

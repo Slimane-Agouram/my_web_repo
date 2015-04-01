@@ -34,7 +34,7 @@
     <div class="presentation-box-top">
       <p class="presentation-box-top-title">Vulputate adipiscing</p>
       <p class="presentation-box-top-text">
-        <md-button ng-click="toggleHideOptions(hide_option)"  class="MyShowButton">
+        <md-button ng-click="toggleHideOptions(hide_option)"  class="L">
           {{hide_option}}
           <i class="icon ion-android-arrow-down"></i>
         </md-button>
@@ -80,8 +80,8 @@
         <p class="item-info-price">{{item.price | currency}}</p>
       </div>
       <div class="item-controls">
-        <md-button class="md-raised md-warn" ng-click="addToCart(item)">Add to cart</md-button>
-        <!-- <input type="button" class="button-personalized" ng-click="addToCart(item)" value="ADD TO CART"/> -->
+        <!-- <md-button class="md-raised md-warn" ng-click="addToCart(item)">Add to cart</md-button> -->
+        <input type="button" class="button-personalized" ng-click="addToCart(item)" value="ADD TO CART"/>
 
         <div class="item-controls-icons">
           <a href="/"><img src="public/img/plus.png"  alt="plus"></a>

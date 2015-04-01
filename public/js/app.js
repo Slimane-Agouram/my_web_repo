@@ -55,7 +55,7 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
     .clear()
     .add('Home', '')
     .add('His', '')
-    .add('Lorem ipsum', '');
+    .add('VULPUTATE ADIPISCING', '');
 
   $scope.optionsHidden = false;
 
