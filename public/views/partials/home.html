@@ -34,10 +34,12 @@
     <div class="presentation-box-top">
       <p class="presentation-box-top-title">Vulputate adipiscing</p>
       <p class="presentation-box-top-text">
-        <md-button ng-click="toggleHideOptions(hide_option)"  class="L">
+        <!-- <md-button ng-click="toggleHideOptions(hide_option)"  class="HideButton">
           {{hide_option}}
           <i class="icon ion-android-arrow-down"></i>
-        </md-button>
+        </md-button> -->
+        <input type="button" value="{{hide_option}}" class="HideButton" ng-click="toggleHideOptions(hide_option)"/>
+        <i class="icon ion-android-arrow-down"></i>
       </p>
     </div>
     <div class="presentation-box-separation"></div>

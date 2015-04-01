@@ -295,6 +295,11 @@ body {
   padding:2px
 
 }
+.HideButton{
+  background-color:white;
+  border:0;
+  padding-top:10px;
+}
 
 .presentation-box-top-text {
   float: right;
