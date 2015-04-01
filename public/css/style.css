@@ -31,7 +31,7 @@ body {
 .header {
   color: white;
   background-color: black;
-  height: 6em;
+  height: 6.5em;
 }
 
 .header-title {
@@ -472,7 +472,7 @@ body {
   color: red;
   text-transform: uppercase;
   margin-bottom: 25px;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 .footer-section-text {
