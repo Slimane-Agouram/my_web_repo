@@ -172,7 +172,7 @@ body {
 .category-box {
   display: inline-block;
   background-color: white;
-  width: 280px;
+  width: 300px;
   margin-right: 20px;
   margin-bottom: 10px;
   vertical-align: top;
@@ -275,7 +275,7 @@ body {
 
 .presentation-box {
   display: block;
-  width: 880px;
+  width: 962px;
   background-color: white;
   margin-bottom: 20px;
 }
@@ -358,6 +358,7 @@ body {
 
 
 .item-img {
+  /*width: 281px;*/
   width: 281px;
   height: 289px;
 
@@ -430,7 +431,7 @@ body {
 .item-info-price {
   color: #FA0039;
   font-weight: 900;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .item-controls {
