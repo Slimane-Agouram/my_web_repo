@@ -435,6 +435,11 @@ body {
 
 }
 
+.cart-total-price{
+  font-weight:600;
+  color:#FA0038;
+}
+
 
 .item-info-text {
   color: black;
@@ -594,6 +599,7 @@ a:hover {
 
 .search {
   float: right;
+  margin-top:-5px;
 }
 
 .search input {
@@ -806,7 +812,7 @@ a:hover {
   border: none;
   background: none;
   	/*padding:		10px 20px !important;*/
-    padding-top: 8px;
+    padding-top: 6px;
     padding-right: 2px;
     letter-spacing: -1px;
     font-weight: bold;
