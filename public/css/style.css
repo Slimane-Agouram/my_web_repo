@@ -174,7 +174,7 @@ body {
 .category-box {
   display: inline-block;
   background-color: white;
-  width: 300px;
+  width: 250px;
   margin-right: 20px;
   margin-bottom: 10px;
   vertical-align: top;
@@ -212,6 +212,7 @@ body {
 
 .category-box-content {
   margin-left: 10px;
+  padding-bottom:10px;
 
 }
 
@@ -272,7 +273,7 @@ body {
 
 .content {
   display: inline-block;
-  max-width: 880px;
+  max-width: 850px;
 }
 
 .body {
@@ -281,7 +282,7 @@ body {
 
 .presentation-box {
   display: block;
-  width: 962px;
+  width: 870px;
   background-color: white;
   margin-bottom: 20px;
 }
@@ -368,14 +369,15 @@ body {
 .item {
   display: inline-block;
   margin-right: 12px;
+  margin-left:20px;
   margin-bottom: 45px;
 }
 
 
 .item-img {
   /*width: 281px;*/
-  width: 281px;
-  height: 289px;
+  width: 240px;
+  height: 240px;
 
 
   box-shadow: 0 60px 25px -60px  #7f7f7f;
@@ -619,8 +621,8 @@ a:hover {
   text-transform: uppercase;
   color: #7f7f7f;
   display: inline-block;
-  margin-right: 120px;
-  margin-left: 10px;
+  margin-right: 50px;
+  margin-left: 20px;
   font-weight:600;
 }
 
