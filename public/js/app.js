@@ -255,7 +255,7 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
   $scope.setSearch = SearchService.setSearch;
 })
 
-.controller('HeaderController', function($scope, PanierController){
+.controller('HeaderController', function($scope, PanierController, $location){
   $scope.$watch(PanierController.get, function(oldValue, newValue){
       $scope.cartCount = PanierController.get().length;
   }, true);
