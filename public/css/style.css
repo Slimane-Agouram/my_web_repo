@@ -264,7 +264,9 @@ body {
   list-style: none;
 }
 
-
+.header-image:hover{
+  cursor:pointer;
+}
 
 .categorySelected {
   font-weight: bold;
