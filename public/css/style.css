@@ -295,7 +295,7 @@ body {
 .presentation-box-top-title {
   color: #FA0038;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 600;
   font-size:18px;
   float: left;
   margin-left: 10px;
@@ -447,7 +447,7 @@ body {
 
 .item-info-price {
   color: #FA0038;
-  font-weight: 900;
+  font-weight: 600;
   margin-top: 10px;
 }
 
@@ -497,7 +497,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px;
   margin-top: 15px;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .footer-section-text {
@@ -570,13 +570,13 @@ a:hover {
 .toolbar ul {
   list-style: none;
   display: inline-block;
-  font-weight:900;
+  font-weight:600;
 }
 
 .toolbar li {
   display: inline-block;
   margin-right: 40px;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .toolbar a {
@@ -1061,7 +1061,7 @@ a:hover {
   font-weight: 300;
   text-align:center;
   margin-top:10px;
-  font-weight:900;
+  font-weight:600;
   letter-spacing:-1px;
   float:center;
 }
