@@ -14,7 +14,7 @@
 <div class="cart-messages" ng-show="showCartMessage">
   <p>
     <i class="icon ion-checkmark"></i>
-    {{lastProduct}} was successfully added to your shopping cart
+    "{{lastProduct}}" was successfully added to your shopping cart
   </p>
 </div>
 
@@ -67,6 +67,6 @@
 </div>
 
 <div class="cart-controls">
-  <a href="/#/"><md-button class="cart-continue-btn">CONTINUE SHOPPING</md-button></a>
-  <md-button class="md-warn md-raised cart-update-btn">UPDATE SHOPPING CART</md-button>
+  <input type="button" class="update-shopping" value="UPDATE SHOPPING CART"/>
+  <input type="button" class="continue-shopping" value="CONTINUE SHOPPING"/>
 </div>

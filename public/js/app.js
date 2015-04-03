@@ -83,7 +83,7 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
   $scope.addToCart = function(item){
     sharedProperties.setLatestProductName(item.name);
     PanierController.add(item);
-    ToastService.simpleToast('"' + item.name + '"' + ' was added to your cart.');
+    ToastService.simpleToast('"' + item.name.bold() + '"' + ' was added to your cart.');
 
   };
 
@@ -108,7 +108,7 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
     var res = UserService.isValid($scope.email, $scope.password);
 
     if(res){
-      ToastService.simpleToast('Welcome back ' + $scope.email + ' !');
+      ToastService.simpleToast('Welcome back ' + $scope.email.bold() + ' !');
     } else {
       ToastService.simpleToast('Wrong login/password');
     }
@@ -124,13 +124,7 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
     password: ''
   };
 
-  // $scope.register = function(){
-  //   if($scope.formRegister.$valid){
-  //     ToastService.simpleToast('Welcome ' + $scope.user.email + ' !');
-  //   } else {
-  //     ToastService.simpleToast('The form is not valid, fields are missing');
-  //   }
-  // };
+
 
   $scope.check= function(model){
     if(model=='guest')
@@ -171,7 +165,7 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
     {
       $scope.showRegisterForm = true;
       if($scope.formRegister.$valid){
-        ToastService.simpleToast('Welcome ' + $scope.user.email + ' !');
+        ToastService.simpleToast('Welcome ' + $scope.user.email.bold() + ' !');
       } else {
         ToastService.simpleToast('The form is not valid, fields are missing');
       }
@@ -265,6 +259,11 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
   $scope.$watch(PanierController.get, function(oldValue, newValue){
       $scope.cartCount = PanierController.get().length;
   }, true);
+
+  $scope.ToggleToHome = function(){
+    $location.path("home");
+
+  };
 
 
 })

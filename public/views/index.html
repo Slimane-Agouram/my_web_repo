@@ -15,7 +15,7 @@
 <!--HEADER SECTION -->
 <header class="header" ng-controller="HeaderController">
   <div class="header-title">
-    <div><img src="public/img/Chaussures.png"></div>
+    <div ng-click="ToggleToHome()"><img  src="public/img/Chaussures.png"></div>
   </div>
   <div class="header-content">
 
@@ -55,7 +55,7 @@
 </header>
 <!--END OF HEADER SECTION  -->
 
-<!-- TOOLBAR SEARCH SECTION -->
+<!-- HORIZONTAL CATEGORY SECTION -->
   <div class="toolbar">
     <ul>
       <li><a href="/#/">Hers</a></li>
@@ -67,10 +67,17 @@
       <li><a href="/#/">Sales</a></li>
       <li><a href="/#/">Dealers</a></li>
     </ul>
+    <!-- END OF HORIZONTAL CATEGORY SECTION -->
+
+    <!-- TOOLBAR SEARCH SECTION -->
 
     <div class="search" ng-controller="SearchController">
       <input id="search-input" ng-model="search" class="search-input" type="text" placeholder="Search entire store here">
-      <md-button ng-click="setSearch(search)" class="md-raised md-warn" id="search-btn">Search</md-button>
+      <!-- <md-button ng-click="setSearch(search)" class="md-raised md-warn" id="search-btn">Search</md-button> -->
+      <!-- <input type="button" class="button-search" ng-click="setSearch(search)" value="Search"/> -->
+      <button type="button" class="button-search" ng-click="setSearch(search)">Search</button>
+
+
     </div>
   </div>
 <!-- END OF TOOLBAR SECTION  -->
@@ -150,8 +157,9 @@
       <a href="/">Careers</a>
       <a href="/">Life @OpenDeal$</a>
     </div>
-    <p class="myName">AGOURAM Slimane</p>
   </div>
+  <div class="myName">AGOURAM Slimane</div>
+
 
   <!-- BOTTOM IMAGE -->
   <div class="bottom-images">

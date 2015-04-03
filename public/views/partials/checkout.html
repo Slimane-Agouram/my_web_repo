@@ -74,13 +74,11 @@
             <p>Password:</p>
             <input ng-model="user.password" type="password" >
           </md-input-container>
-          <!-- <div id="checkout-login-submit">
-            <p><md-button name="submit" type="submit" ng-click="register()">register</md-button></p>
-          </div> -->
         </md-content>
       </form>
 
-      <md-button class="md-raised md-warn" ng-click="toggleRegisterForm()" >Continue</md-button>
+      <button type="button" class="button-continue" ng-click="toggleRegisterForm()">CONTINUE</button>
+
     </div>
   </div>
 
@@ -90,15 +88,17 @@
 
     <form name="login-form" id="checkout-login-form">
       <div id="checkout-login-form-email">
-        <label for="email">Email Address:</label>
+        <label for="email" class="email-text">Email Address:</label>
         <p><input name="email" type="email" placeholder="test@test.com" ng-model="email" required></p>
       </div>
       <div id="checkout-login-form-password">
-        <label for="password">Password:</label>
+        <label for="password" class="password-text">Password:</label>
         <p><input name="password" type="password" ng-model="password" required></p>
+        <p class="required-text">*  Required Fields</p>
       </div>
 
-      <md-button id="login-btn" class="md-raised md-warn" ng-click="login()">LOGIN</md-button>
+      <button type="button" class="button-login" ng-click="login()">LOGIN</button>
+
     </form>
   </div>
 
