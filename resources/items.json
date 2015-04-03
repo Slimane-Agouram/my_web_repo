@@ -4,41 +4,41 @@
     "description": "Italian leather shoes",
     "price": 100,
     "category": "Quisque iaculis",
-    "image": "http://placehold.it/350x350"
+    "image": "https://placehold.it/350x350"
   },
   {
     "name": "Macbook Pro 13",
     "description": "Apple product",
     "price": 1000,
     "category": "Quisque iaculis",
-    "image": "http://placehold.it/350x350"
+    "image": "https://placehold.it/350x350"
   },
   {
     "name": "Nintendo DS",
     "description": "Great game console",
     "price": 150,
     "category": "Sed sagittis",
-    "image": "http://placehold.it/350x350"
+    "image": "https://placehold.it/350x350"
   },
   {
     "name": "Children Toy",
     "description": "For your child creativity",
     "price": 80,
     "category": "Massa non urna",
-    "image": "http://placehold.it/350x350"
+    "image": "https://placehold.it/350x350"
   },
   {
     "name": "Aston Martin DB9",
     "description": "James Bond's ride",
     "price": 60000,
     "category": "Sicntus Vamitus",
-    "image": "http://placehold.it/350x350"
+    "image": "https://placehold.it/350x350"
   },
   {
     "name": "Dekstop",
     "description":"White IKEA Desktop",
     "price": 400,
     "category": "Sed sagittis",
-    "image": "http://placehold.it/350x350"
+    "image": "https://placehold.it/350x350"
   }
 ]
