@@ -83,7 +83,7 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
   $scope.addToCart = function(item){
     sharedProperties.setLatestProductName(item.name);
     PanierController.add(item);
-    ToastService.simpleToast('"' + item.name.bold() + '"' + ' was added to your cart.');
+    ToastService.simpleToast('"' + item.name + '"' + ' was added to your cart.');
 
   };
 
@@ -174,7 +174,7 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
 
 })
 
-.controller('PanierController', function($scope, ArianeService, PanierController, sharedProperties){
+.controller('PanierController', function($scope, $location, ArianeService, PanierController, sharedProperties){
   ArianeService
     .clear()
     .add('Home', '')
@@ -219,6 +219,10 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngResource'])
       $scope.showCartMessage = false;
 
     }
+  };
+
+  $scope.ToggleHome=function(){
+    $location.path("home");
   };
 
   $scope.totalPrice = getTotalPrice();
