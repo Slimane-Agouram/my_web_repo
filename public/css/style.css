@@ -1058,6 +1058,7 @@ a:hover {
   align-content:center;
   font-weight: 300;
   text-align:center;
+  margin-top:10px;
   font-weight:900;
   letter-spacing:-1px;
   float:center;
@@ -1129,5 +1130,5 @@ a:hover {
   	font-size:		14px !important;
   	background-color:	black;
     color: white;
-    width:150px;
+    width:170px;
 }
